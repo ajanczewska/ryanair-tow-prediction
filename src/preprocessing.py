@@ -7,7 +7,9 @@ def clean_data(df, train_set=True):
     df.replace('(null)', np.nan, inplace=True)
     # sort data by date
     df = df.sort_values('DepartureDate').reset_index(drop=True)
-
+    # replace values with none
+    df.replace('(null)', np.nan, inplace=True)
+    df.replace('(null)', np.nan, inplace=True)
     if train_set:
         # remove missing values
         df.dropna(axis=0, subset=['ActualTOW'], inplace=True)

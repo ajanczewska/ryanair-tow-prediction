@@ -1,0 +1,23 @@
+{
+    "LinearRegression": {
+        "n_features": 4
+    },
+    "Ridge": {
+        "n_features": 4,
+        "alpha": 1.0663441255541037
+    },
+    "Lasso": {
+        "n_features": 4,
+        "alpha": 0.00010014542284673758
+    },
+    "RandomForestRegressor": {
+        "n_features": 5,
+        "n_estimators": 425,
+        "min_samples_split": 10
+    },
+    "XGBRegressor": {
+        "n_features": 5,
+        "n_estimators": 275,
+        "learning_rate": 0.060000000000000005
+    }
+}

@@ -1,0 +1,13 @@
+data:
+  train_path: /data/raw/training.csv
+  test_path: /data/raw/validation.csv
+  output_path: /results/predictions.csv
+
+columns:
+  target: ActualTOW
+  features: ['Route', 'ActualTotalFuel', 'FLownPassengers', 'BagsCount', 'FlightBagsWeight']
+
+model:
+  params_path: /best_models_params.json
+  name: XGBRegressor
+  module_name: xgboost
