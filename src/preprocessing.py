@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OrdinalEncoder
 from tqdm import tqdm
 
 def clean_data(df, train_set=True):
@@ -18,14 +18,16 @@ def clean_data(df, train_set=True):
     for col in ['ActualFlightTime', 'ActualTotalFuel', 'FLownPassengers',
                 'BagsCount', 'FlightBagsWeight']:
         df[col] = pd.to_numeric(df[col])
-    
-    # encoder categorical data
-    for col in ['DepartureAirport',	'ArrivalAirport', 'Route']:
-        le = LabelEncoder()
-        df[col] = le.fit_transform(df[col])
-
     df.reset_index(inplace=True, drop=True)
     return df
+
+def encode_categorical(df_train, df_test, col):
+    df_train = df_train.copy()
+    df_test = df_test.copy()
+    le = OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)
+    df_train.loc[:, col] = le.fit_transform(df_train[[col]])
+    df_test.loc[:, col] = le.transform(df_test[[col]])
+    return df_train, df_test
 
 def imput_missing_values(df, history_set=pd.DataFrame()):
     df_copy = df.copy()

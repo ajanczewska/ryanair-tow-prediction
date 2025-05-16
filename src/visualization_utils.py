@@ -119,14 +119,4 @@ def plot_results_compiration(y_pred, y_val):
         width=800,
         height= 500,
     )
-
-    # fig_box = px.box(df, y='percent_error')
-    # fig_box.update_layout(
-    #     title='Boxplot of percent error',
-    #     xaxis_title='ActualTOW [kg]',
-    #     yaxis_title='error [%]',
-    #     width=500,
-    #     height=600,
-    # )
     fig_hist.show()
-    #fig_box.show()

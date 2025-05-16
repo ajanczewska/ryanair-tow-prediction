@@ -4,20 +4,20 @@
     },
     "Ridge": {
         "n_features": 4,
-        "alpha": 1.0663441255541037
+        "alpha": 1.0047539224353372
     },
     "Lasso": {
         "n_features": 4,
-        "alpha": 0.00010014542284673758
+        "alpha": 0.00010125779730260497
     },
     "RandomForestRegressor": {
         "n_features": 5,
-        "n_estimators": 425,
+        "n_estimators": 300,
         "min_samples_split": 10
     },
     "XGBRegressor": {
         "n_features": 5,
-        "n_estimators": 275,
+        "n_estimators": 300,
         "learning_rate": 0.060000000000000005
     }
 }

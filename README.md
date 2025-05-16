@@ -1,6 +1,6 @@
 # Take-Off Weight Prediction
 
-Regression model predicting Take-Off Weight of an aircraft.
+Take-Off Weight of an aircraft prediction using regression model.
 
 ## General info 
 
@@ -45,26 +45,30 @@ The resulting predictions will be saved in `results/predictions.csv`.
 ## Methodology
 
 1. **EDA**
+
 Data overview, quality checking, missing values detection, analysis.
 
 2. **Data Cleaning**
+
 Handling missing values using route/airport-based medians and logical imputations.
 
 3. **Feature Engineering**
+
 Transformation of categorical variables and choosing feature based on analysis and importance.
 
 4. **Model training**
+
 Training multiple models:
 
-    - Linear Regression
+- Linear Regression
 
-    - Ridge
+- Ridge
 
-    - Lasso
+- Lasso
 
-    - Random Forest Regressor
+- Random Forest Regressor
 
-    - XGBoost Regressor
+- XGBoost Regressor
 
 5. **Hyperparameter optimization**
 Using Optuna with time-aware cross-validation.
