@@ -44,19 +44,19 @@ The resulting predictions will be saved in `results/predictions.csv`.
 
 ## Methodology
 
-1. **EDA**
+1. EDA
 
 Data overview, quality checking, missing values detection, analysis.
 
-2. **Data Cleaning**
+2. Data Cleaning
 
 Handling missing values using route/airport-based medians and logical imputations.
 
-3. **Feature Engineering**
+3. Feature Engineering
 
 Transformation of categorical variables and choosing feature based on analysis and importance.
 
-4. **Model training**
+4. Model training
 
 Training multiple models:
 
@@ -70,10 +70,12 @@ Training multiple models:
 
 - XGBoost Regressor
 
-5. **Hyperparameter optimization**
+5. Hyperparameter optimization
+
 Using Optuna with time-aware cross-validation.
 
-6. **Evaluation**
+6. Evaluation
+
 Model selection based on RMSE score on a validation split.
 
 ## Notes
